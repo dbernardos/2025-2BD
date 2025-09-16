@@ -25,6 +25,8 @@
                     <th scope="col">Aluno</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Excluir</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +34,7 @@
                 while($linha = $sql->fetch(PDO::FETCH_ASSOC)){
             ?>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row"><?php echo $linha['id']?></th>
                     <td><?php echo $linha['nome']?></td>
                     <td><?php echo $linha['email'] ?></td>
                     <td><?php 
