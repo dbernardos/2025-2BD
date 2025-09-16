@@ -1,3 +1,8 @@
+<?php 
+    include 'conexao.php';
+    $sql = $pdo->query("SELECT * FROM Aluno");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,18 +22,22 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Aluno</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Data de Nascimento</th>
                 </tr>
             </thead>
             <tbody>
+            <?php 
+                while($linha = $sql->fetch(PDO::FETCH_ASSOC)){
+            ?>
                 <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
                     <td>@mdo</td>
                 </tr>
+            <?php } ?>
             </tbody>
         </table>
     </div>
