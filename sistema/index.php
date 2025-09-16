@@ -42,14 +42,14 @@
                         $data = "".$partes[2]."/".$partes[1]."/".$partes[0];
                         echo $data ?>
                     </td>
-                    <td><form action="atualizar.php" method="POST">            
-                        <input type="submit" name="btnEditar" 
-                        value="Editar" class="btn btn-primary">
+                    <td><form action="atualizar.php" method="POST">
+                        <button class="btn btn-primary" name="btnEditar" 
+                        value="<?php echo $linha['id'];?>">Editar</button>
                     </form></td>
 
-                    <td><form action="excluir.php" method="POST">   
-                        <input type="submit" name="btnExcluir" 
-                        value="Excluir" class="btn btn-danger">
+                    <td><form action="excluir.php" method="POST"> 
+                        <button class="btn btn-danger" name="btnExcluir" 
+                        value="<?php echo $linha['id'];?>">Excluir</button>
                     </form></td>
                 </tr>
             <?php } ?>
