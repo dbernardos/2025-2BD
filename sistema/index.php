@@ -33,13 +33,29 @@
             ?>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td><?php echo $linha['nome']?></td>
+                    <td><?php echo $linha['email'] ?></td>
+                    <td><?php 
+                        $partes = explode('-', $linha['data_nascimento']);
+                        $data = "".$partes[2]."/".$partes[1]."/".$partes[0];
+                        echo $data ?></td>
                 </tr>
             <?php } ?>
             </tbody>
         </table>
+        
+        <form action="adicionar.php" method="POST">
+            <input type="text" name="txtNome" 
+            placeholder="Digite o nome do aluno.." required>
+
+            <input type="email" name="txtEmail" 
+            placeholder="Digite o email do aluno.." required>
+            
+            <input type="date" name="txtData" 
+            placeholder="Digite a data de nascimento do aluno..">
+
+            <input type="submit" value="Salvar" name="btnSalvar" class="btn btn-success">
+        </form>
     </div>
 </body>
 
