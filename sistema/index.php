@@ -40,7 +40,17 @@
                     <td><?php 
                         $partes = explode('-', $linha['data_nascimento']);
                         $data = "".$partes[2]."/".$partes[1]."/".$partes[0];
-                        echo $data ?></td>
+                        echo $data ?>
+                    </td>
+                    <td><form action="atualizar.php" method="POST">            
+                        <input type="submit" name="btnEditar" 
+                        value="Editar" class="btn btn-primary">
+                    </form></td>
+
+                    <td><form action="excluir.php" method="POST">   
+                        <input type="submit" name="btnExcluir" 
+                        value="Excluir" class="btn btn-danger">
+                    </form></td>
                 </tr>
             <?php } ?>
             </tbody>
