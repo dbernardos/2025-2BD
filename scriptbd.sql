@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: mydb
+-- Host: localhost    Database: escola_tecnica
 -- ------------------------------------------------------
 -- Server version	10.4.32-MariaDB
 
@@ -18,6 +18,9 @@
 --
 -- Table structure for table `aluno`
 --
+CREATE DATABASE escola_tecnica;
+use escola_tecnica
+
 
 DROP TABLE IF EXISTS `aluno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
